@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-marine-primary: #0D9488;
+  --color-marine-primary-hover: #0B7A70;
+  --color-marine-secondary: #22C55E;
+  --color-marine-tertiary: #F97316;
+  --color-marine-neutral: #64748B;
+  --color-marine-bg: #F4F7FC;
+  --color-marine-dark: #0F172A;
+
+  --font-sans: var(--font-inter), sans-serif;
+  --font-headline: var(--font-plus-jakarta-sans), sans-serif;
+}
+
+/* Kustomisasi global */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-inter), sans-serif;
+  background-color: var(--color-marine-bg);
+}
