@@ -28,10 +28,10 @@ export default function LandingPage() {
               Platform untuk pengelolaan konservasi, integrasi data riset spesifik, dan pemantauan real-time vegetasi padang lamun Indonesia.
             </p>
             <div className="flex flex-wrap gap-4">
-              <button className="bg-marine-primary text-white font-semibold text-sm px-6 py-3 rounded-xl hover:bg-marine-primary-hover transition-all shadow-md cursor-pointer">
+              <a href="/map" className="bg-marine-primary text-white font-semibold text-sm px-6 py-3 rounded-xl hover:bg-marine-primary-hover transition-all shadow-md cursor-pointer inline-flex items-center justify-center">
                 Jelajahi Peta
-              </button>
-              <a href="/kalkulator" className="bg-white text-marine-primary border-2 border-marine-primary font-semibold text-sm px-6 py-3 rounded-xl hover:bg-marine-primary/5 transition-all cursor-pointer inline-flex items-center justify-center">
+              </a>
+              <a href="/calculator" className="bg-white text-marine-primary border-2 border-marine-primary font-semibold text-sm px-6 py-3 rounded-xl hover:bg-marine-primary/5 transition-all cursor-pointer inline-flex items-center justify-center">
                 Kalkulator Blue Karbon
               </a>
             </div>
@@ -112,7 +112,7 @@ export default function LandingPage() {
 
           </div>
 
-          {/* BAGIAN BARU: Area Komponen Peta Interaktif & Chart Placeholder */}
+          {/* Area Komponen Peta Interaktif & Chart Placeholder */}
           <div className="w-full bg-white border border-slate-200 rounded-2xl shadow-md p-8 min-h-[400px] flex flex-col items-center justify-center text-center space-y-4">
             <div className="p-4 bg-slate-100 rounded-full text-2xl text-marine-primary animate-pulse">
               🗺️
@@ -122,7 +122,7 @@ export default function LandingPage() {
                 Interactive Map and Charts Component Placeholders
               </h3>
               <p className="text-sm text-marine-neutral max-w-md font-medium">
-                Modul WebGIS spasial sebaran padang lamun nasional dan visualisasi grafik analitis integrasi data BRIN akan di-render di area ini.
+                Modul WebGIS spasial sebaran padang lamun nasional dan visualisasi grafik analitis integrasi data akan di-render di area ini.
               </p>
             </div>
             <div className="pt-2 flex gap-3">
