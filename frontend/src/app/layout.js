@@ -13,7 +13,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata = {
   title: "SI-LAMUN - Memantau Ekosistem Lamun Indonesia",
-  description: "Platform nasional untuk konservasi, riset, dan pemantauan padang lamun.",
+  description: "Platform untuk konservasi, riset, dan pemantauan padang lamun.",
 };
 
 export default function RootLayout({ children }) {

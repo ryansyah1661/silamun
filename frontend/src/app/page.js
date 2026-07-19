@@ -1,34 +1,16 @@
 import React from 'react';
+import Navbar from '@/components/navbar';
+import Footer from '@/components/footer';
 
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-marine-bg text-marine-dark antialiased font-sans">
       
-      {/* TopNavBar */}
-      <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm">
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12 h-16 w-full">
-          <div className="font-headline text-2xl font-extrabold text-marine-primary tracking-tight">
-            SI-LAMUN
-          </div>
-          <div className="hidden md:flex space-x-8 font-semibold text-sm">
-            <a className="text-marine-primary border-b-2 border-marine-primary pb-1" href="#">Beranda</a>
-            <a className="text-marine-neutral hover:text-marine-primary transition-colors" href="#">Peta</a>
-            <a className="text-marine-neutral hover:text-marine-primary transition-colors" href="#">Dashboard</a>
-            <a className="text-marine-neutral hover:text-marine-primary transition-colors" href="#">Spesies</a>
-            <a className="text-marine-neutral hover:text-marine-primary transition-colors" href="#">Data</a>
-            <a className="text-marine-neutral hover:text-marine-primary transition-colors" href="#">Tentang</a>
-          </div>
-          <div className="flex items-center space-x-4">
-            <span className="text-xs font-bold text-marine-neutral tracking-wider">ID | EN</span>
-            <button className="bg-marine-primary text-white font-semibold text-sm px-5 py-2 rounded-lg hover:bg-marine-primary-hover transition-colors shadow-sm">
-              Masuk
-            </button>
-          </div>
-        </div>
-      </nav>
+      {/* Navbar Kustom */}
+      <Navbar currentMenu="beranda" />
 
       {/* Hero Section */}
-      <section className="relative w-full h-screen min-h-[650px] flex items-center pt-16 bg-gradient-to-r from-slate-900/90 to-slate-700/40 overflow-hidden">
+      <section className="relative w-full h-screen min-h-162.5 flex items-center pt-16 bg-linear-to-r from-slate-900/90 to-slate-700/40 overflow-hidden">
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center mix-blend-overlay opacity-40"
           style={{ backgroundImage: `url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070')` }}
@@ -43,15 +25,15 @@ export default function LandingPage() {
               Memantau Ekosistem Lamun Indonesia
             </h1>
             <p className="text-marine-neutral text-base md:text-lg font-normal leading-relaxed mb-8">
-              Platform nasional tepercaya untuk pengelolaan konservasi, integrasi data riset spesifik, and pemantauan real-time vegetasi padang lamun Indonesia.
+              Platform untuk pengelolaan konservasi, integrasi data riset spesifik, dan pemantauan real-time vegetasi padang lamun Indonesia.
             </p>
             <div className="flex flex-wrap gap-4">
-              <button className="bg-marine-primary text-white font-semibold text-sm px-6 py-3 rounded-xl hover:bg-marine-primary-hover transition-all shadow-md">
+              <button className="bg-marine-primary text-white font-semibold text-sm px-6 py-3 rounded-xl hover:bg-marine-primary-hover transition-all shadow-md cursor-pointer">
                 Jelajahi Peta
               </button>
-              <button className="bg-white text-marine-primary border-2 border-marine-primary font-semibold text-sm px-6 py-3 rounded-xl hover:bg-marine-primary/5 transition-all">
-                Lihat Dashboard
-              </button>
+              <a href="/kalkulator" className="bg-white text-marine-primary border-2 border-marine-primary font-semibold text-sm px-6 py-3 rounded-xl hover:bg-marine-primary/5 transition-all cursor-pointer inline-flex items-center justify-center">
+                Kalkulator Blue Karbon
+              </a>
             </div>
           </div>
         </div>
@@ -59,8 +41,10 @@ export default function LandingPage() {
 
       {/* Main Content Area */}
       <main className="py-16 bg-slate-50">
-        <section className="max-w-7xl mx-auto px-6 md:px-12 mb-16 -mt-32 relative z-20">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <section className="max-w-7xl mx-auto px-6 md:px-12 relative z-20 -mt-32">
+          
+          {/* 4 Cards Statistik Utama */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             
             {/* Stat 1 */}
             <div className="bg-white p-6 rounded-xl shadow-md border border-slate-200 flex flex-col justify-between">
@@ -127,8 +111,35 @@ export default function LandingPage() {
             </div>
 
           </div>
+
+          {/* BAGIAN BARU: Area Komponen Peta Interaktif & Chart Placeholder */}
+          <div className="w-full bg-white border border-slate-200 rounded-2xl shadow-md p-8 min-h-[400px] flex flex-col items-center justify-center text-center space-y-4">
+            <div className="p-4 bg-slate-100 rounded-full text-2xl text-marine-primary animate-pulse">
+              🗺️
+            </div>
+            <div className="space-y-1">
+              <h3 className="font-headline text-lg font-bold text-slate-800">
+                Interactive Map and Charts Component Placeholders
+              </h3>
+              <p className="text-sm text-marine-neutral max-w-md font-medium">
+                Modul WebGIS spasial sebaran padang lamun nasional dan visualisasi grafik analitis integrasi data BRIN akan di-render di area ini.
+              </p>
+            </div>
+            <div className="pt-2 flex gap-3">
+              <span className="text-xs font-bold bg-slate-100 text-slate-600 px-3 py-1.5 rounded-lg border border-slate-200 shadow-xs">
+                Leaflet / Mapbox Ready
+              </span>
+              <span className="text-xs font-bold bg-slate-100 text-slate-600 px-3 py-1.5 rounded-lg border border-slate-200 shadow-xs">
+                Chart.js / Recharts Ready
+              </span>
+            </div>
+          </div>
+
         </section>
       </main>
+
+      {/* Footer Kustom */}
+      <Footer />
     </div>
   );
 }

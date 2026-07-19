@@ -7,17 +7,15 @@
   --color-marine-tertiary: #F97316;
   --color-marine-neutral: #64748B;
   --color-marine-bg: #F4F7FC;
-  --color-marine-dark: #0F172A;
+  --color-marine-dark: #042F2E;
 
   --font-sans: var(--font-inter), sans-serif;
   --font-headline: var(--font-plus-jakarta-sans), sans-serif;
 }
 
-/* Kustomisasi global */
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: var(--font-inter), sans-serif;
   background-color: var(--color-marine-bg);
 }
